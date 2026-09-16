@@ -384,6 +384,10 @@ ultimate-governance-solution
 | Field brief format | Defined |
 | Heraldic compliance | ⚜️ Confirmed |
 
+### v40.3 · Harbour dispatch
+
+**The Hammer has spoken (quietly).** When Runtime Injection stands down, the ARK-OS chip holds the centre datum above AUTHORIZE. On desktop, the Operational Footbar now answers only to an explicit click; a scroll is not a royal decree. Mobile keeps its directional watch, and the duplicate `update/` cargo has left the harbour. ⚜️
+
 ---
 
 ## 09 · Acceptance Test
