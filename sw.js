@@ -1,8 +1,8 @@
-const CACHE_VERSION = 'ark-os-v42-core-6';
+const CACHE_VERSION = 'ark-os-v42-core-7';
 const CORE_ASSETS = [
   './',
   './index.html',
-  './index.css?v=42-core-6',
+  './index.css?v=42-core-7',
   './manifest.webmanifest',
   './icons/icon-192.png',
   './icons/icon-512.png',

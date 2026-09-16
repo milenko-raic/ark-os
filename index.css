@@ -5712,3 +5712,64 @@ html.signal-notice-acknowledged .signal-notice{display:none!important}
     min-height:49px !important;
   }
 }
+
+/* Runtime ingress and ARK-OS share one desktop control line. */
+@media (min-width:761px){
+  .identity-rail{
+    grid-template-columns:minmax(60px,1fr) minmax(0,650px) max-content;
+    column-gap:0;
+  }
+  .runtime-injection{
+    grid-column:2;
+    grid-row:1;
+    justify-self:stretch;
+    max-width:none;
+    position:relative;
+    z-index:2;
+  }
+  .runtime-injection-port{
+    height:48px;
+    border-color:rgba(196,156,98,.42);
+    border-radius:4px;
+  }
+  .runtime-injection-run{height:34px}
+  .runtime-injection::after{
+    content:"";
+    position:absolute;
+    left:100%;
+    top:50%;
+    width:9px;
+    height:1px;
+    background:rgba(224,191,145,.72);
+    box-shadow:0 0 7px rgba(224,191,145,.28);
+    pointer-events:none;
+  }
+  .header-tools{
+    grid-column:3;
+    grid-row:1;
+    justify-self:start;
+    margin-left:9px;
+    gap:12px;
+  }
+  .runtime-injection:is(:hover,:focus-within,.has-input) + .header-tools .header-system{
+    border-color:rgba(224,191,145,.58);
+    box-shadow:inset 0 0 0 1px rgba(224,191,145,.08),0 0 14px rgba(196,156,98,.10);
+  }
+}
+@media (min-width:761px) and (max-width:1180px){
+  .authority-copy{display:none}
+  .header-authority{width:48px}
+}
+@media (max-width:760px){
+  .runtime-injection{position:relative}
+  .runtime-injection::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:-14px;
+    width:1px;
+    height:14px;
+    background:linear-gradient(180deg,rgba(224,191,145,.5),rgba(224,191,145,.12));
+    pointer-events:none;
+  }
+}
