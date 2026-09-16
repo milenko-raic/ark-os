@@ -1,4 +1,4 @@
-ARK-OS / N.O.I.S.E. Harbour · v40 Production Bundle
+ARK-OS / N.O.I.S.E. Harbour · v40.3 Production Bundle
 
 DEPLOYMENT
 1. Upload index.html, index.css, manifest.webmanifest, sw.js, the icons/ directory and the public/ directory to the same web root.
@@ -26,7 +26,10 @@ Compatible browsers can expose the native install prompt. On iPhone/iPad, the in
 Reality remains the acceptance test. ∴
 
 
-INSTALL SURFACE · v40.1
+INSTALL SURFACE · v40.3
 The in-app “Install ARK-OS” control remains visible whenever the app is not already running in standalone mode.
 If the browser supports a native install prompt, ARK-OS uses it. Otherwise the control gives platform-specific installation guidance.
 A downloaded file:// copy or ChatGPT/sandbox preview is not a production PWA origin. Deploy the bundle over HTTPS (or localhost for testing).
+
+HEADER / OPERATIONAL ACCESS · v40.3
+The Operational Footbar is hidden on entry and controlled by the ARK-OS chip on desktop. Mobile keeps direction-aware access. When Runtime Injection is stowed on desktop, the ARK-OS chip moves to the central operator datum above AUTHORIZE without changing header or navigation geometry. The footbar follows the primary content width.

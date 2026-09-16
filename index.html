@@ -1720,11 +1720,7 @@ Reality remains the acceptance test. ∴`;
 
   /* Extracted script block 11 from index.html. */
   {
-/* v23 · ARK-OS Operational Footbar
-   Default-hidden institutional access layer.
-   Deliberate DOWN travel reveals; deliberate UP travel withdraws.
-   The ARK-OS identity in the top navigation is a manual show/hide control.
-   Scroll-direction logic resumes after manual interaction without fighting it. */
+/* v40.3 · Desktop footbar uses explicit ARK-OS control; mobile retains scroll access. */
 (() => {
   const bar = document.getElementById('arkOperationalFootbar');
   if (!bar) return;
@@ -1736,6 +1732,7 @@ Reality remains the acceptance test. ∴`;
   const runtimeInput = document.getElementById('sosRuntimeInput');
   const topbar = document.querySelector('.topbar');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const desktopMode = window.matchMedia('(min-width: 761px)');
   const scroller = document.scrollingElement || document.documentElement;
 
   const NOISE_FLOOR = 2;
@@ -1785,6 +1782,13 @@ Reality remains the acceptance test. ∴`;
 
   const evaluate = timestamp => {
     const y = currentScrollY();
+    if (desktopMode.matches) {
+      previousScrollY = y;
+      accumulatedTravel = 0;
+      scrollDirection = 0;
+      ticking = false;
+      return;
+    }
     const delta = y - previousScrollY;
 
     // The harbour beacon is the terminal surface. Once the document end
@@ -1850,7 +1854,7 @@ Reality remains the acceptance test. ∴`;
       // Keep the true document end reserved for SUPER TERRAM NAVIGAMUS.
       // Operational access becomes available again as soon as the operator
       // moves off the terminal datum.
-      if (isAtDocumentEnd()) {
+      if (!desktopMode.matches && isAtDocumentEnd()) {
         setFootbarVisible(false, true);
         previousScrollY = currentScrollY();
         return;
@@ -1861,7 +1865,9 @@ Reality remains the acceptance test. ∴`;
   }
 
   // Keyboard access should never disappear while the surface is active.
-  bar.addEventListener('focusin', () => setFootbarVisible(true));
+  bar.addEventListener('focusin', () => {
+    if (footbarVisible) setFootbarVisible(true);
+  });
   bar.addEventListener('pointerenter', () => {
     if (footbarVisible) setFootbarVisible(true);
   });
@@ -1906,14 +1912,23 @@ Reality remains the acceptance test. ∴`;
     previousScrollY = currentScrollY();
     accumulatedTravel = 0;
     scrollDirection = 0;
-    if (isAtDocumentEnd()) setFootbarVisible(false);
+    if (!desktopMode.matches && isAtDocumentEnd()) setFootbarVisible(false);
   }, {passive:true});
+
+  const handleModeChange = () => {
+    previousScrollY = currentScrollY();
+    accumulatedTravel = 0;
+    scrollDirection = 0;
+    setFootbarVisible(false, true);
+  };
+  if (typeof desktopMode.addEventListener === 'function') desktopMode.addEventListener('change', handleModeChange);
+  else if (typeof desktopMode.addListener === 'function') desktopMode.addListener(handleModeChange);
 
   // Enforce the terminal state after kinetic / smooth scrolling completes
   // on browsers that expose scrollend. It is an additive safety net; the
   // rAF scroll path above remains authoritative everywhere else.
   window.addEventListener('scrollend', () => {
-    if (isAtDocumentEnd()) setFootbarVisible(false);
+    if (!desktopMode.matches && isAtDocumentEnd()) setFootbarVisible(false);
   }, {passive:true});
 
   setFootbarVisible(false, true);
@@ -5015,11 +5030,7 @@ Reality remains the acceptance test. ∴`;
 
   /* Extracted script block 11 from index.html. */
   {
-/* v23 · ARK-OS Operational Footbar
-   Default-hidden institutional access layer.
-   Deliberate DOWN travel reveals; deliberate UP travel withdraws.
-   The ARK-OS identity in the top navigation is a manual show/hide control.
-   Scroll-direction logic resumes after manual interaction without fighting it. */
+/* v40.3 · Desktop footbar uses explicit ARK-OS control; mobile retains scroll access. */
 (() => {
   const bar = document.getElementById('arkOperationalFootbar');
   if (!bar) return;
@@ -5031,6 +5042,7 @@ Reality remains the acceptance test. ∴`;
   const runtimeInput = document.getElementById('sosRuntimeInput');
   const topbar = document.querySelector('.topbar');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const desktopMode = window.matchMedia('(min-width: 761px)');
   const scroller = document.scrollingElement || document.documentElement;
 
   const NOISE_FLOOR = 2;
@@ -5080,6 +5092,13 @@ Reality remains the acceptance test. ∴`;
 
   const evaluate = timestamp => {
     const y = currentScrollY();
+    if (desktopMode.matches) {
+      previousScrollY = y;
+      accumulatedTravel = 0;
+      scrollDirection = 0;
+      ticking = false;
+      return;
+    }
     const delta = y - previousScrollY;
 
     // The harbour beacon is the terminal surface. Once the document end
@@ -5145,7 +5164,7 @@ Reality remains the acceptance test. ∴`;
       // Keep the true document end reserved for SUPER TERRAM NAVIGAMUS.
       // Operational access becomes available again as soon as the operator
       // moves off the terminal datum.
-      if (isAtDocumentEnd()) {
+      if (!desktopMode.matches && isAtDocumentEnd()) {
         setFootbarVisible(false, true);
         previousScrollY = currentScrollY();
         return;
@@ -5156,7 +5175,9 @@ Reality remains the acceptance test. ∴`;
   }
 
   // Keyboard access should never disappear while the surface is active.
-  bar.addEventListener('focusin', () => setFootbarVisible(true));
+  bar.addEventListener('focusin', () => {
+    if (footbarVisible) setFootbarVisible(true);
+  });
   bar.addEventListener('pointerenter', () => {
     if (footbarVisible) setFootbarVisible(true);
   });
@@ -5201,14 +5222,23 @@ Reality remains the acceptance test. ∴`;
     previousScrollY = currentScrollY();
     accumulatedTravel = 0;
     scrollDirection = 0;
-    if (isAtDocumentEnd()) setFootbarVisible(false);
+    if (!desktopMode.matches && isAtDocumentEnd()) setFootbarVisible(false);
   }, {passive:true});
+
+  const handleModeChange = () => {
+    previousScrollY = currentScrollY();
+    accumulatedTravel = 0;
+    scrollDirection = 0;
+    setFootbarVisible(false, true);
+  };
+  if (typeof desktopMode.addEventListener === 'function') desktopMode.addEventListener('change', handleModeChange);
+  else if (typeof desktopMode.addListener === 'function') desktopMode.addListener(handleModeChange);
 
   // Enforce the terminal state after kinetic / smooth scrolling completes
   // on browsers that expose scrollend. It is an additive safety net; the
   // rAF scroll path above remains authoritative everywhere else.
   window.addEventListener('scrollend', () => {
-    if (isAtDocumentEnd()) setFootbarVisible(false);
+    if (!desktopMode.matches && isAtDocumentEnd()) setFootbarVisible(false);
   }, {passive:true});
 
   setFootbarVisible(false, true);

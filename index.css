@@ -5640,3 +5640,75 @@ html.signal-notice-acknowledged .signal-notice{display:none!important}
 .hero-right .quick-grid .quick:nth-child(2) strong{
   color:#e6c895;
 }
+
+/* v40.3 · Stable desktop operator datum and shared footbar width. */
+:root{
+  --op-footbar-surface-w:min(1280px,calc(100vw - 42px));
+}
+@media (min-width:761px) and (max-width:1080px){
+  :root{--op-footbar-surface-w:calc(100vw - 30px)}
+}
+@media (min-width:761px){
+  .op-footbar,
+  .footer-beacon{
+    width:var(--op-footbar-surface-w);
+  }
+  .topbar.runtime-injection-hidden .header-tools{
+    display:flex !important;
+    grid-column:3 !important;
+    grid-row:1 !important;
+    justify-self:stretch !important;
+    justify-content:flex-end !important;
+    align-items:center !important;
+  }
+  .topbar.runtime-injection-hidden .header-system{
+    position:absolute !important;
+    left:50% !important;
+    top:50% !important;
+    width:132px !important;
+    min-width:132px !important;
+    height:48px !important;
+    margin:0 !important;
+    padding:0 18px !important;
+    transform:translate(-50%,-50%) !important;
+    translate:none !important;
+    grid-column:auto !important;
+    grid-row:auto !important;
+    justify-self:auto !important;
+    align-self:auto !important;
+    z-index:12 !important;
+  }
+  .topbar.runtime-injection-hidden .header-system:hover,
+  .topbar.runtime-injection-hidden .header-system:focus-visible,
+  .topbar.runtime-injection-hidden .header-system:active,
+  .topbar.runtime-injection-hidden .header-system[aria-expanded="true"]{
+    width:132px !important;
+    min-width:132px !important;
+    height:48px !important;
+    margin:0 !important;
+    transform:translate(-50%,-50%) !important;
+    scale:1 !important;
+  }
+  .topbar.runtime-injection-hidden .scroll-top-control{
+    position:relative !important;
+    grid-column:auto !important;
+    grid-row:auto !important;
+    justify-self:auto !important;
+    align-self:center !important;
+    margin:0 !important;
+  }
+  .topbar.runtime-injection-hidden .runtime-injection{
+    opacity:0 !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+    transform:none !important;
+    filter:none !important;
+  }
+  .topbar .navlinks,
+  .topbar.runtime-injection-hidden .navlinks,
+  .topbar.runtime-injection-visible .navlinks{
+    width:100% !important;
+    grid-template-columns:repeat(5,minmax(0,1fr)) !important;
+    min-height:49px !important;
+  }
+}

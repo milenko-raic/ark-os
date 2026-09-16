@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'ark-os-v42-core-4';
+const CACHE_VERSION = 'ark-os-v42-core-5';
 const CORE_ASSETS = [
   './',
   './index.html',
@@ -8,7 +8,6 @@ const CORE_ASSETS = [
   './icons/icon-512.png',
   './icons/icon-maskable-512.png',
   './icons/apple-touch-icon.png',
-  './public/images/stability_before_beauty.png',
   './public/images/harbour-exchange.png',
   './public/images/harbour-interface.png'
 ];
