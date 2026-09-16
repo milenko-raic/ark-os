@@ -2108,7 +2108,7 @@ Reality remains the acceptance test. ∴`;
     if(!('serviceWorker' in navigator)) return;
     if(!hasSecureInstallContext()) return;
     try{
-      await navigator.serviceWorker.register('./sw.js',{scope:'./'});
+      await navigator.serviceWorker.register('./sw.js',{scope:'./',updateViaCache:'none'});
       await navigator.serviceWorker.ready;
       swReady=true;
     }catch(error){
@@ -2180,7 +2180,7 @@ Reality remains the acceptance test. ∴`;
 </script>
   <link rel="icon" type="image/svg+xml"
     href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20135.46666%20135.46667%22%3E%3Cpath%20fill%3D%22%23e0bf91%22%20d%3D%22M%204.6857581%2C112.6849%20H%2033.162227%20L%2048.303449%2C79.390933%2044.539065%2C71.192931%2028.878836%2C106.66186%20H%2015.27392%20L%2042.029477%2C48.160193%2068.08744%2C104.9888%2080.509966%2C79.390933%2075.992689%2C71.192931%2068.08744%2C88.132673%2042.029477%2C31.03936%20Z%22%2F%3E%3Cpath%20fill%3D%22%23e0bf91%22%20d%3D%22m%2056.118236%2C44.404043%203.98032%2C8.887097%207.988884%2C-18.278226%2035.42717%2C77.671986%20h%2028.6094%20L%2094.862626%2C31.03936%2088.42993%2C45.113879%2092.054102%2C53.29114%2094.862626%2C48.083733%20121.56282%2C106.66186%20H%20108.49193%20L%2068.08744%2C17.667446%20Z%22%2F%3E%3C%2Fsvg%3E" />
-  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="./index.css?v=42-core-6" />
 </head>
 
 <body id="top">
@@ -5418,7 +5418,7 @@ Reality remains the acceptance test. ∴`;
     if(!('serviceWorker' in navigator)) return;
     if(!hasSecureInstallContext()) return;
     try{
-      await navigator.serviceWorker.register('./sw.js',{scope:'./'});
+      await navigator.serviceWorker.register('./sw.js',{scope:'./',updateViaCache:'none'});
       await navigator.serviceWorker.ready;
       swReady=true;
     }catch(error){

@@ -1,8 +1,8 @@
-const CACHE_VERSION = 'ark-os-v42-core-5';
+const CACHE_VERSION = 'ark-os-v42-core-6';
 const CORE_ASSETS = [
   './',
   './index.html',
-  './index.css',
+  './index.css?v=42-core-6',
   './manifest.webmanifest',
   './icons/icon-192.png',
   './icons/icon-512.png',
@@ -38,12 +38,30 @@ self.addEventListener('fetch', event => {
   if (request.mode === 'navigate') {
     event.respondWith((async () => {
       try {
-        const response = await fetch(request);
-        const cache = await caches.open(CACHE_VERSION);
-        cache.put(request, response.clone()).catch(() => {});
+        const response = await fetch(request, {cache: 'no-cache'});
+        if (response.ok) {
+          const cache = await caches.open(CACHE_VERSION);
+          cache.put(request, response.clone()).catch(() => {});
+        }
         return response;
       } catch (error) {
         return (await caches.match(request)) || (await caches.match('./index.html')) || (await caches.match('./'));
+      }
+    })());
+    return;
+  }
+
+  if (url.pathname.endsWith('/index.css') || url.pathname.endsWith('/manifest.webmanifest')) {
+    event.respondWith((async () => {
+      try {
+        const response = await fetch(request, {cache: 'no-cache'});
+        if (response.ok) {
+          const cache = await caches.open(CACHE_VERSION);
+          cache.put(request, response.clone()).catch(() => {});
+        }
+        return response;
+      } catch (error) {
+        return (await caches.match(request)) || new Response('', {status: 504, statusText: 'Offline'});
       }
     })());
     return;
