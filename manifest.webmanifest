@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "ARK-OS · N.O.I.S.E. Harbour",
+  "name": "ARK-OS",
   "short_name": "ARK-OS",
-  "description": "Operational systems-governance console for observation, routing, bounded authority, structural analysis, evidence and clean release.",
+  "description": "ARK-OS turns cross-system ambiguity into governed action with bounded authority, controlled transitions and verifiable evidence.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
