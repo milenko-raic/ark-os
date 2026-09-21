@@ -78,7 +78,7 @@ if (document.body && !window.__arkIndexBootRan) {
 window.ARKOSUniversalCycle = (() => {
   const definitions = {
     charter:{
-      title:'CHARTER',question:'Why are we here?',function:'Establish terms.',
+      title:'CHARTER',question:'Why are we here?',function:'Define mandate and operating terms.',
       purpose:'Establish the terms under which interaction may exist.',
       defines:'Intent · authority · mandate · scope · constraints · expected outcome · owner · review condition · acceptable operating conditions',
       failure:'Action begins without explicit mandate, scope, owner or acceptable operating conditions.',
@@ -1086,7 +1086,7 @@ renderQuestions();updateScore();renderSymptoms();renderProtocol();bindMandate();
         exit:['NOT PROVEN','bad']
       });
       paintRoute(defaultCycleRoute, defaultCycleSummary);
-      nextAction.textContent = 'Describe what is happening, then route the observed condition through N.O.I.S.E. / ARK-OS VERITOS with the runtime envelope preserved.';
+      nextAction.textContent = 'Describe what is happening, then route the observed condition through N.O.I.S.E. Harbour · ARK-OS VERITOS with the runtime envelope preserved.';
       interpretation.textContent = 'VERITOS awaits an observed condition. Local signals above are deterministic browser-side routing cues only; they are not autonomous systems analysis. N.O.I.S.E. provides the human systems-thinking layer and human judgment remains authoritative.';
       paintVeritosStatus({states:{authority:['UNKNOWN','neutral']},route:defaultCycleRoute,summary:defaultCycleSummary,input:''});
       if (window.ARKOSUniversalCycle && typeof window.ARKOSUniversalCycle.reset === 'function') window.ARKOSUniversalCycle.reset();
@@ -1123,7 +1123,7 @@ renderQuestions();updateScore();renderSymptoms();renderProtocol();bindMandate();
     runtimeInput.dispatchEvent(new Event('runtime:preset-loaded'));
   };
 
-  const buildOperatorMessage = input => `N.O.I.S.E. / ARK-OS
+  const buildOperatorMessage = input => `N.O.I.S.E. Harbour · ARK-OS
 VERITOS · SoS OPERATIONAL ROUTING
 SPECIALIZED CROSS-SYSTEM ANALYSIS ENVIRONMENT
 
@@ -1473,7 +1473,7 @@ Reality remains the acceptance test. ∴`;
       exit:['NOT PROVEN','bad']
     });
     paintRoute(defaultCycleRoute, defaultCycleSummary);
-    nextAction.textContent = 'Describe what is happening, then route the observed condition through N.O.I.S.E. / ARK-OS VERITOS with the runtime envelope preserved.';
+    nextAction.textContent = 'Describe what is happening, then route the observed condition through N.O.I.S.E. Harbour · ARK-OS VERITOS with the runtime envelope preserved.';
     interpretation.textContent = 'VERITOS awaits an observed condition. Local signals above are deterministic browser-side routing cues only; they are not autonomous systems analysis. N.O.I.S.E. provides the human systems-thinking layer and human judgment remains authoritative.';
     paintVeritosStatus({states:{authority:['UNKNOWN','neutral']},route:defaultCycleRoute,summary:defaultCycleSummary,input:''});
     if (window.ARKOSUniversalCycle && typeof window.ARKOSUniversalCycle.reset === 'function') window.ARKOSUniversalCycle.reset();
@@ -2310,12 +2310,7 @@ Reality remains the acceptance test. ∴`;
           <a class="mark" href="#runtime-interfaces" data-runtime-interfaces-link
             aria-label="Open ARK-OS Universal Navigation Cycle" title="Universal Navigation Cycle">
             <span class="brand-logo" aria-hidden="true">
-              <svg viewBox="0 0 135.46666 135.46667" focusable="false" aria-hidden="true">
-                <path
-                  d="M 4.6857581,112.6849 H 33.162227 L 48.303449,79.390933 44.539065,71.192931 28.878836,106.66186 H 15.27392 L 42.029477,48.160193 68.08744,104.9888 80.509966,79.390933 75.992689,71.192931 68.08744,88.132673 42.029477,31.03936 Z" />
-                <path
-                  d="m 56.118236,44.404043 3.98032,8.887097 7.988884,-18.278226 35.42717,77.671986 h 28.6094 L 94.862626,31.03936 88.42993,45.113879 92.054102,53.29114 94.862626,48.083733 121.56282,106.66186 H 108.49193 L 68.08744,17.667446 Z" />
-              </svg>
+              <img src="./public/images/brand/noise-harbour.svg" alt="" />
             </span>
           </a>
           <span class="authority-copy">
@@ -2617,11 +2612,24 @@ Reality remains the acceptance test. ∴`;
             <span>LOG</span><b class="cycle-loop-return">↻ CHARTER</b>
           </div>
 
-          <div class="cycle-principle">
-            <span>Human intent</span><b>→</b><span>controlled movement</span><b>→</b><span>observed
-              reality</span><b>→</b><span>bounded correction</span><b>→</b><span>clean
-              release</span><b>→</b><span>evidence</span><b>→</b><span>renewed intent</span>
-          </div>
+          <section class="cycle-principle" aria-labelledby="cycle-principle-title">
+            <div class="cycle-principle__head">
+              <span id="cycle-principle-title">Sustainable operating ring</span>
+              <p>Intent moves through reality. Evidence renews the next intent.</p>
+            </div>
+            <div class="cycle-principle__diagram">
+              <div class="cycle-principle__ring" aria-hidden="true"></div>
+              <ol aria-label="Human intent becomes controlled movement, observed reality, bounded correction, clean release, evidence and renewed intent">
+                <li class="cycle-principle__intent"><b>01</b><span>Human intent</span></li>
+                <li class="cycle-principle__movement"><b>02</b><span>Controlled movement</span></li>
+                <li class="cycle-principle__reality"><b>03</b><span>Observed reality</span></li>
+                <li class="cycle-principle__correction"><b>04</b><span>Bounded correction</span></li>
+                <li class="cycle-principle__release"><b>05</b><span>Clean release</span></li>
+                <li class="cycle-principle__evidence"><b>06</b><span>Evidence</span></li>
+              </ol>
+              <div class="cycle-principle__core"><b>↻</b><svg class="cycle-principle__core-copy" viewBox="0 0 132 132" role="img" aria-label="Learn, return, continue"><defs><path id="cycle-core-copy-path" d="M 24 82 A 48 48 0 0 0 108 82"></path></defs><text><textPath href="#cycle-core-copy-path" startOffset="50%">LEARN · RETURN · CONTINUE</textPath></text></svg></div>
+            </div>
+          </section>
 
           <div class="runtime-grid universal-cycle-grid" role="list"
             aria-label="ARK-OS Universal Navigation Cycle surfaces">
@@ -2785,68 +2793,82 @@ Reality remains the acceptance test. ∴`;
               <div>
                 <div class="runtime-reference-label">Selected runtime surface</div>
                 <h3 id="cycleInspectorTitle">CHARTER</h3>
+                <p class="cycle-inspector-lead">What this surface means, what can fail, and what must happen next.</p>
               </div>
               <code id="cycleInspectorState">CHARTER · UNDEFINED</code>
             </div>
             <div class="cycle-inspector-grid">
-              <div><span>Question</span><strong id="cycleInspectorQuestion">Why are we here?</strong></div>
-              <div><span>Primary function</span><strong id="cycleInspectorFunction">Establish terms.</strong></div>
-              <div><span>Purpose</span>
+              <div class="cycle-inspector-prompt"><span>Question</span><strong id="cycleInspectorQuestion">Why are we here?</strong></div>
+              <div class="cycle-inspector-function"><span>Primary function</span><strong id="cycleInspectorFunction">Define mandate and operating terms.</strong></div>
+              <div class="cycle-inspector-purpose"><span>Purpose</span>
                 <p id="cycleInspectorPurpose">Establish the terms under which interaction may exist.</p>
               </div>
-              <div><span>Failure signal</span>
+              <div class="cycle-inspector-risk"><span>Failure signal</span>
                 <p id="cycleInspectorFailure">Action begins without explicit mandate, scope, owner or acceptable
                   operating conditions.</p>
               </div>
-              <div><span>Evidence expected</span>
+              <div class="cycle-inspector-evidence"><span>Evidence expected</span>
                 <p id="cycleInspectorEvidence">Named intent, authority, scope, owner, constraints, outcome and review
                   condition.</p>
               </div>
-              <div><span>Possible return path</span>
+              <div class="cycle-inspector-return"><span>Possible return path</span>
                 <p id="cycleInspectorReturn">GATE → HOLD → CHARTER · CALIBRATE → CHARTER · LOG → CHARTER</p>
               </div>
-              <div class="cycle-inspector-wide"><span>Available states</span>
+              <div class="cycle-inspector-wide cycle-inspector-states"><span>Available states</span>
                 <p id="cycleInspectorStates">UNDEFINED · DRAFT · ESTABLISHED · REVOKED</p>
               </div>
-              <div class="cycle-inspector-wide"><span>Defines</span>
+              <div class="cycle-inspector-wide cycle-inspector-defines"><span>This surface defines</span>
                 <p id="cycleInspectorDefines">Intent · authority · mandate · scope · constraints · expected outcome ·
                   owner · review condition · acceptable operating conditions</p>
               </div>
-              <div class="cycle-inspector-wide"><span>Bounded next action</span>
+              <div class="cycle-inspector-wide cycle-inspector-action"><span>Bounded next action</span>
                 <p id="cycleInspectorAction">Name the mandate, owner, scope, constraints and observable review condition
                   before movement begins.</p>
               </div>
             </div>
           </section>
 
+          <details class="cycle-deep-dive">
+            <summary><span>Runtime methodology</span><strong>Return paths, invariants and distinctions</strong></summary>
           <div class="cycle-reference-grid">
             <section class="runtime-sequence cycle-runtime-loop" aria-labelledby="runtime-sequence-title">
-              <div class="runtime-reference-label" id="runtime-sequence-title">Runtime cycle · controlled return paths
+              <div class="runtime-reference-label cycle-runtime-heading" id="runtime-sequence-title">
+                <span>Runtime cycle · controlled return paths</span>
+                <span class="cycle-runtime-origin"><small>SE · AUTHORITY</small><i class="swedish-flag" role="img" aria-label="Sweden"></i></span>
               </div>
-              <div class="runtime-sequence-line">
-                <code>CHARTER → BEARING → GATE → BRIDGE → PASSAGE → CALIBRATE → TRIM → RELEASE → LOG ↻ CHARTER</code>
+              <div class="cycle-system-map" aria-label="CHARTER to LOG, returning to CHARTER">
+                <span><b>01</b>CHARTER</span><i>→</i>
+                <span><b>02</b>BEARING</span><i>→</i>
+                <span><b>03</b>GATE</span><i>→</i>
+                <span><b>04</b>BRIDGE</span><i>→</i>
+                <span><b>05</b>PASSAGE</span><i>→</i>
+                <span><b>06</b>CALIBRATE</span><i>→</i>
+                <span><b>07</b>TRIM</span><i>→</i>
+                <span><b>08</b>RELEASE</span><i>→</i>
+                <span><b>09</b>LOG</span><i class="cycle-system-map__return">↻</i>
+                <span class="cycle-system-map__renewed"><b>01</b>CHARTER</span>
               </div>
               <div class="runtime-sequence-name">Protocol → direction → authority → connection → movement → verification
                 → correction → closure → evidence</div>
               <div class="runtime-sequence-copy">
-                <p>The cycle is intentionally domain-independent. Software systems, organizations, projects,
+                <article><h4>Operating scope</h4><p>The cycle is intentionally domain-independent. Software systems, organizations, projects,
                   infrastructure, governance, migrations, vendor transitions, meetings, decisions, human coordination,
                   incidents, operational failures, physical systems, personal processes and negotiations can use the
-                  same runtime surfaces.</p>
-                <p><strong>LOG informs the next CHARTER.</strong> A completed cycle produces better context for the next
-                  cycle.</p>
-                <p>Intent becomes direction. Direction receives authority. Authority enables connection. Connection
+                  same runtime surfaces.</p></article>
+                <article><h4>Evidence loop</h4><p><strong>LOG informs the next CHARTER.</strong> A completed cycle produces better context for the next
+                  cycle.</p></article>
+                <article><h4>System flow</h4><p>Intent becomes direction. Direction receives authority. Authority enables connection. Connection
                   enables passage. Reality calibrates passage. Trim restores alignment. Release removes dependency.
-                  Evidence informs the next charter.</p>
+                  Evidence informs the next charter.</p></article>
               </div>
               <div class="cycle-return-paths">
-                <code>PASSAGE → CALIBRATE → TRIM → PASSAGE</code><span>Correct drift and continue.</span>
-                <code>GATE → HOLD → CHARTER</code><span>Re-establish authority or mandate.</span>
-                <code>CALIBRATE → BEARING</code><span>Revise direction when reality disproves it.</span>
-                <code>CALIBRATE → CHARTER</code><span>Re-charter when the original mandate is invalid.</span>
-                <code>TRIM → CALIBRATE</code><span>Every correction must be re-observed.</span>
-                <code>RELEASE → HOLD</code><span>Residual dependency prevents clean exit.</span>
-                <code>LOG → CHARTER</code><span>Evidence becomes next-cycle context.</span>
+                <div><code>PASSAGE → CALIBRATE → TRIM → PASSAGE</code><span>Correct drift and continue.</span></div>
+                <div><code>GATE → HOLD → CHARTER</code><span>Re-establish authority or mandate.</span></div>
+                <div><code>CALIBRATE → BEARING</code><span>Revise direction when reality disproves it.</span></div>
+                <div><code>CALIBRATE → CHARTER</code><span>Re-charter when the original mandate is invalid.</span></div>
+                <div><code>TRIM → CALIBRATE</code><span>Every correction must be re-observed.</span></div>
+                <div><code>RELEASE → HOLD</code><span>Residual dependency prevents clean exit.</span></div>
+                <div><code>LOG → CHARTER</code><span>Evidence becomes next-cycle context.</span></div>
               </div>
             </section>
 
@@ -2878,11 +2900,15 @@ Reality remains the acceptance test. ∴`;
               </div>
             </section>
           </div>
+          </details>
 
           <details class="legacy-runtime-lineage">
-            <summary>Legacy interface lineage · MEZA / FUKA / TAMAN / AMANET</summary>
+            <summary><span>Legacy interface lineage · MEZA / FUKA / TAMAN / AMANET</span><strong><b>AI INCOMPATIBLE</b> · RagusaOS + Drijeva Runtime Shell</strong></summary>
             <div class="legacy-runtime-copy">
-              <div class="runtime-card-kicker">Auxiliary runtime interfaces · TRA / NPA</div>
+              <div class="runtime-card-kicker aux-runtime-heading">
+                <span>Auxiliary runtime interfaces · TRA / NPA</span>
+                <span class="aux-runtime-origin"><small>HR · BA</small><i class="national-flag flag-croatia" role="img" aria-label="Croatia"></i><i class="national-flag flag-bih" role="img" aria-label="Bosnia and Herzegovina"></i></span>
+              </div>
               <h3>Beyond the primary console.</h3>
               <p>Four named interfaces sit outside the primary navigation rail.</p>
               <p>They are not additional workflow steps. They are <strong>portable runtime surfaces</strong> used
@@ -3028,11 +3054,10 @@ Reality remains the acceptance test. ∴`;
         <div class="sos-shell" id="sosShell">
           <div class="sos-head">
             <div>
-              <div class="sos-kicker">N.O.I.S.E. / ARK-OS</div>
+              <div class="sos-kicker">N.O.I.S.E. Harbour · ARK-OS</div>
               <h2 id="sos-title">Operational Routing</h2>
               <div class="veritos-subtitle"><b>Specialized cross-system analysis environment</b> · System-of-systems
                 runtime · ARK-OS Interaction Surface</div>
-              <div class="veritos-routing-mark">ARK-OS / VERITOS runtime</div>
             </div>
             <div class="sos-authority">
               <strong>TRA / NPA · ACTIVE</strong>
@@ -3203,7 +3228,7 @@ Reality remains the acceptance test. ∴`;
 
               <div class="sos-label">Bounded next action</div>
               <div class="sos-next"><strong id="sosNextAction">Describe what is happening, then route the observed
-                  condition through N.O.I.S.E. / ARK-OS VERITOS with the runtime envelope preserved.</strong></div>
+                  condition through N.O.I.S.E. Harbour · ARK-OS VERITOS with the runtime envelope preserved.</strong></div>
 
               <div class="sos-human-loop">
                 <span>Human → System → Human</span>
@@ -3226,7 +3251,7 @@ Reality remains the acceptance test. ∴`;
     <div class="wrap">
       <div class="footer-grid">
         <div class="footer-contact">
-          <div class="runtime-authority"><i></i><span>TEGELBRUKSGATAN RUNTIME AUTHORITY</span><b aria-hidden="true"></b><i></i></div>
+          <div class="runtime-authority"><span class="runtime-authority__lily" aria-hidden="true">⚜</span><i></i><span>TEGELBRUKSGATAN RUNTIME AUTHORITY</span><i></i><span class="runtime-authority__lily" aria-hidden="true">⚜</span></div>
           <div class="ark-cartouche" aria-label="Adaptive Routing Kernel — Open Systems — Cross-System Operational Intelligence — Built for the space between">
             <div class="ark-cartouche__top"><span>[ ARK-OS ∞ ]</span><i></i><span>[ OPEN SYSTEMS ]</span></div>
             <div class="ark-cartouche__middle"><strong>ADAPTIVE ROUTING KERNEL</strong><span>Cross-System Operational Intelligence.</span></div>
@@ -3269,7 +3294,7 @@ Reality remains the acceptance test. ∴`;
           <div class="footer-medallion">
             <span class="ring-rotor" aria-hidden="true"><span class="orb one"></span><span
                 class="orb two"></span></span>
-            <span class="infinity">∞</span>
+            <img class="harbour-print-mark" src="./public/images/brand/noise-harbour-print.svg" alt="N.O.I.S.E. Harbour" />
           </div>
           <div class="pwa-install-line contact-beacon-slot footer-app-beacon" id="pwaInstallLine">
             <button class="contact-beacon contact-beacon--app pwa-install-button" id="pwaInstallButton" type="button" aria-label="Install ARK-OS" title="Install ARK-OS" aria-describedby="pwaInstallStatus">
@@ -3441,7 +3466,7 @@ if (document.body && !window.__arkIndexBootRan) {
 window.ARKOSUniversalCycle = (() => {
   const definitions = {
     charter:{
-      title:'CHARTER',question:'Why are we here?',function:'Establish terms.',
+      title:'CHARTER',question:'Why are we here?',function:'Define mandate and operating terms.',
       purpose:'Establish the terms under which interaction may exist.',
       defines:'Intent · authority · mandate · scope · constraints · expected outcome · owner · review condition · acceptable operating conditions',
       failure:'Action begins without explicit mandate, scope, owner or acceptable operating conditions.',
@@ -4449,7 +4474,7 @@ renderQuestions();updateScore();renderSymptoms();renderProtocol();bindMandate();
         exit:['NOT PROVEN','bad']
       });
       paintRoute(defaultCycleRoute, defaultCycleSummary);
-      nextAction.textContent = 'Describe what is happening, then route the observed condition through N.O.I.S.E. / ARK-OS VERITOS with the runtime envelope preserved.';
+      nextAction.textContent = 'Describe what is happening, then route the observed condition through N.O.I.S.E. Harbour · ARK-OS VERITOS with the runtime envelope preserved.';
       interpretation.textContent = 'VERITOS awaits an observed condition. Local signals above are deterministic browser-side routing cues only; they are not autonomous systems analysis. N.O.I.S.E. provides the human systems-thinking layer and human judgment remains authoritative.';
       paintVeritosStatus({states:{authority:['UNKNOWN','neutral']},route:defaultCycleRoute,summary:defaultCycleSummary,input:''});
       if (window.ARKOSUniversalCycle && typeof window.ARKOSUniversalCycle.reset === 'function') window.ARKOSUniversalCycle.reset();
@@ -4486,7 +4511,7 @@ renderQuestions();updateScore();renderSymptoms();renderProtocol();bindMandate();
     runtimeInput.dispatchEvent(new Event('runtime:preset-loaded'));
   };
 
-  const buildOperatorMessage = input => `N.O.I.S.E. / ARK-OS
+  const buildOperatorMessage = input => `N.O.I.S.E. Harbour · ARK-OS
 VERITOS · SoS OPERATIONAL ROUTING
 SPECIALIZED CROSS-SYSTEM ANALYSIS ENVIRONMENT
 
@@ -4836,7 +4861,7 @@ Reality remains the acceptance test. ∴`;
       exit:['NOT PROVEN','bad']
     });
     paintRoute(defaultCycleRoute, defaultCycleSummary);
-    nextAction.textContent = 'Describe what is happening, then route the observed condition through N.O.I.S.E. / ARK-OS VERITOS with the runtime envelope preserved.';
+    nextAction.textContent = 'Describe what is happening, then route the observed condition through N.O.I.S.E. Harbour · ARK-OS VERITOS with the runtime envelope preserved.';
     interpretation.textContent = 'VERITOS awaits an observed condition. Local signals above are deterministic browser-side routing cues only; they are not autonomous systems analysis. N.O.I.S.E. provides the human systems-thinking layer and human judgment remains authoritative.';
     paintVeritosStatus({states:{authority:['UNKNOWN','neutral']},route:defaultCycleRoute,summary:defaultCycleSummary,input:''});
     if (window.ARKOSUniversalCycle && typeof window.ARKOSUniversalCycle.reset === 'function') window.ARKOSUniversalCycle.reset();

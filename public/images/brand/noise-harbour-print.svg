@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes nhPulse {
+      0% { transform: scaleY(0.85); opacity: 0.6; }
+      50% { transform: scaleY(1); opacity: 1; }
+      100% { transform: scaleY(0.85); opacity: 0.6; }
+    }
+    @keyframes nhHalo {
+      0% { filter: drop-shadow(0 0 0.3px rgba(198, 169, 97, 0.16)); }
+      50% { filter: drop-shadow(0 0 0.8px rgba(198, 169, 97, 0.26)); }
+      100% { filter: drop-shadow(0 0 0.3px rgba(198, 169, 97, 0.16)); }
+    }
+    @keyframes nhMark {
+      0% { opacity: 0.72; }
+      50% { opacity: 0.96; }
+      100% { opacity: 0.72; }
+    }
+    .nh-signal-bar {
+      transform-box: fill-box;
+      transform-origin: center bottom;
+      animation: nhPulse 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite, nhHalo 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      will-change: transform, opacity, filter;
+    }
+    .nh-bar-1 { animation-delay: 0s, 0s; }
+    .nh-bar-2 { animation-delay: 0.12s, 0.12s; }
+    .nh-bar-3 { animation-delay: 0.24s, 0.24s; }
+    .nh-bar-4 { animation-delay: 0.36s, 0.36s; }
+    .nh-bar-5 { animation-delay: 0.48s, 0.48s; }
+    .nh-signal-mark {
+      fill: #bda65e;
+      animation: nhMark 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      animation-delay: 0.24s;
+    }
+  </style>
+  <g transform="translate(-0.18)">
+    <path class="nh-signal-bar nh-bar-1" d="m 8.5547122,13.839766 c -0.1766231,0 -0.3230911,-0.146468 -0.3230911,-0.323091 v -3.230912 c 0,-0.176623 0.146468,-0.323091 0.3230911,-0.323091 0.1766232,0 0.3230911,0.146468 0.3230911,0.323091 v 3.230912 c 0,0.176623 -0.1464679,0.323091 -0.3230911,0.323091 z" fill="#bda65e"/>
+    <path class="nh-signal-bar nh-bar-2" d="m 10.493259,14.916736 c -0.176623,0 -0.323091,-0.146468 -0.323091,-0.323091 V 9.208793 c 0,-0.1766231 0.146468,-0.3230911 0.323091,-0.3230911 0.176623,0 0.323091,0.146468 0.323091,0.3230911 v 5.384852 c 0,0.176623 -0.146468,0.323091 -0.323091,0.323091 z" fill="#bda65e"/>
+    <path class="nh-signal-bar nh-bar-3" d="m 12.431806,15.993706 c -0.176623,0 -0.323091,-0.146468 -0.323091,-0.323091 V 8.1318226 c 0,-0.1766231 0.146468,-0.3230911 0.323091,-0.3230911 0.176623,0 0.323091,0.146468 0.323091,0.3230911 v 7.5387924 c 0,0.176623 -0.146468,0.323091 -0.323091,0.323091 z" fill="#bda65e"/>
+    <path class="nh-signal-bar nh-bar-4" d="m 14.370353,14.916736 c -0.176623,0 -0.323091,-0.146468 -0.323091,-0.323091 V 9.208793 c 0,-0.1766231 0.146468,-0.3230911 0.323091,-0.3230911 0.176623,0 0.323091,0.146468 0.323091,0.3230911 v 5.384852 c 0,0.176623 -0.146468,0.323091 -0.323091,0.323091 z" fill="#bda65e"/>
+    <path class="nh-signal-bar nh-bar-5" d="m 16.308899,13.839766 c -0.176623,0 -0.323091,-0.146468 -0.323091,-0.323091 v -3.230912 c 0,-0.176623 0.146468,-0.323091 0.323091,-0.323091 0.176624,0 0.323092,0.146468 0.323092,0.323091 v 3.230912 c 0,0.176623 -0.146468,0.323091 -0.323092,0.323091 z" fill="#bda65e"/>
+    <text class="nh-signal-mark" xml:space="preserve" style="font-weight:bold;font-size:29.7358px;font-family:'Cormorant Garamond';letter-spacing:4.65299px" x="1.1340427" y="21.545698"><tspan x="1.1340427" y="21.545698">H</tspan></text>
+  </g>
+</svg>
