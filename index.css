@@ -6537,3 +6537,190 @@ html.signal-notice-acknowledged .signal-notice{display:none!important}
     pointer-events:none;
   }
 }
+
+/* Mobile clarity pass: solid command surfaces and non-overlapping terminal footer. */
+@media (max-width:760px){
+  .topbar{
+    background:#04090e !important;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+  }
+  .identity-rail,
+  .navlinks{
+    background:#04090e;
+  }
+  .navlinks a{
+    background:#050b11;
+  }
+  .navlinks a:hover,
+  .navlinks a:focus-visible,
+  .navlinks a.active{
+    background:#0a151d;
+  }
+  .op-footbar__shell{
+    background:#04090e !important;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+    box-shadow:0 -12px 34px rgba(0,0,0,.48),inset 0 1px 0 rgba(255,255,255,.018);
+  }
+  .op-footbar__action{
+    background:#050b11;
+  }
+  .op-footbar__action:hover,
+  .op-footbar__action:focus-visible,
+  .op-footbar__action.is-route{
+    background:#0a151d;
+  }
+  .footer{
+    background:#03080c !important;
+  }
+  .footer-grid{
+    gap:24px;
+  }
+  .footer-identity .identity-stack{
+    width:100%;
+    margin-inline:auto;
+  }
+  .captains-log{
+    position:relative;
+    top:auto;
+    right:auto;
+    z-index:1;
+    width:min(100%,330px);
+    margin:18px auto 0;
+    transform:none;
+    filter:drop-shadow(0 6px 10px rgba(0,0,0,.28));
+  }
+  .footer-bottom{
+    clear:both;
+    margin-top:28px;
+    padding:18px 14px 0;
+    line-height:1.55;
+  }
+  .footer-beacon{
+    margin-top:14px;
+  }
+}
+
+@media (max-width:760px){
+  .footer-contact,
+  .footer-identity{
+    padding-inline:10px;
+  }
+  .footer-identity .projection-label{
+    margin-bottom:9px;
+    text-align:center;
+  }
+  .footer-identity .identity-stack{
+    width:min(100%,330px);
+  }
+  .footer-identity .identity-heading{
+    width:max-content;
+    max-width:100%;
+    margin-inline:auto;
+  }
+  .footer-identity .name{
+    font-size:20px;
+    line-height:1.2;
+    text-align:center;
+    white-space:nowrap;
+  }
+  .footer-identity .institute{
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    gap:0;
+    contain:inline-size;
+    width:100%;
+    font-size:7.5px;
+    line-height:1.35;
+    text-align:center;
+  }
+  .footer-identity .seal{
+    width:min(100%,240px);
+    gap:4px;
+    margin:12px auto 0;
+    text-align:center;
+  }
+  .footer-identity .seal-est{
+    white-space:normal;
+  }
+  .footer-identity .anchor{
+    text-align:center;
+  }
+  .footer-identity .legal-details{
+    contain:none;
+    margin-top:15px;
+  }
+  .footer .registration{
+    table-layout:auto;
+  }
+  .footer .registration thead th{
+    padding:0 4px 9px;
+    font-size:9.5px;
+    line-height:1.45;
+    text-align:center;
+  }
+  .footer .registration tbody th{
+    width:62px;
+    padding:7px 8px 7px 4px;
+    font-size:7.5px;
+  }
+  .footer .registration tbody td{
+    padding:7px 4px 7px 10px;
+    font-size:8.5px;
+    line-height:1.45;
+    text-align:left;
+  }
+  .captains-log{
+    width:100%;
+    padding:11px 10px 10px;
+  }
+  .captains-log__head{
+    gap:8px;
+    letter-spacing:.08em;
+  }
+  .captains-log__entry{
+    grid-template-columns:34px minmax(0,1fr);
+    gap:6px;
+  }
+  .footer-bottom{
+    font-size:7.3px;
+    letter-spacing:.13em;
+  }
+}
+
+@media (max-width:980px){
+  .footer-contact,
+  .footer-identity{
+    border-inline:1px solid rgba(196,156,98,.28);
+  }
+  .footer-contact::before,
+  .footer-identity::before{
+    top:0;
+    right:-1px;
+    left:-1px;
+    width:auto;
+    height:16px;
+    border:0;
+    background:
+      linear-gradient(var(--gold),var(--gold)) left top/16px 2px no-repeat,
+      linear-gradient(var(--gold),var(--gold)) left top/2px 16px no-repeat,
+      linear-gradient(var(--gold),var(--gold)) right top/16px 2px no-repeat,
+      linear-gradient(var(--gold),var(--gold)) right top/2px 16px no-repeat;
+  }
+  .footer-contact::after,
+  .footer-identity::after{
+    right:-1px;
+    bottom:0;
+    left:-1px;
+    width:auto;
+    height:16px;
+    border:0;
+    background:
+      linear-gradient(var(--gold),var(--gold)) left bottom/16px 2px no-repeat,
+      linear-gradient(var(--gold),var(--gold)) left bottom/2px 16px no-repeat,
+      linear-gradient(var(--gold),var(--gold)) right bottom/16px 2px no-repeat,
+      linear-gradient(var(--gold),var(--gold)) right bottom/2px 16px no-repeat;
+  }
+}
